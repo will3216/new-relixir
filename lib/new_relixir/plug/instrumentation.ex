@@ -45,7 +45,7 @@ defmodule NewRelixir.Plug.Instrumentation do
     model_name(model_type)
   end
 
-  defp infer_model(%Ecto.Changeset{model: model}) do
+  defp infer_model(%Ecto.Changeset{data: model}) do
     infer_model(model)
   end
 
